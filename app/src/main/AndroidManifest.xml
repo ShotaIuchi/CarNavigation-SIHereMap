@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sihuocthai.map.here">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SIHereMap">
+
+        <meta-data android:name="com.here.sdk.access_key_id" android:value="F8bw-yH4aPgxHCgz57bMSg" />
+        <meta-data android:name="com.here.sdk.access_key_secret" android:value="SF2eHrjQwav22p6MeO9-Ae5CVmf-a8qP4wpI82DK5Fx7eOOPH8AAufijqX_3YgGNadpQTZUpamwcMmdn-mlcuQ" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
